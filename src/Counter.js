@@ -20,15 +20,15 @@ const Counter = (props) => {
             setCounter(0);
         }
     }
-        const updateStep = (event) => {
-            setStep(+event);
+    const updateStep = (event) => {
+        setStep(+event);
     };
 
     return (
         <div className="counter">
             <Display counter={counter} />
             <ButtonsPanel updateCounter={updateCounter} step={step} />
-            <Step updateStep={updateStep} />
+            <Step updateStep={updateStep} step={step} />
             {showClock ? (
                 <Clock setShowClock={setShowClock} />
             ) : (
